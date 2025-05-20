@@ -9,5 +9,9 @@ def services(request): return render(request, 'portfolio/services.html')
 def contact(request): return render(request, 'portfolio/contact.html')
 
 def cv(request):
-    cv = CV.objects.last()  # prend le dernier CV ajouté
-    return render(request, 'portfolio/cv.html', {'cv': cv})
+    cv = CV.objects.first()
+    if cv:
+        cv_url_absolu = request.build_absolute_uri(cv.fichier.url)
+    else:
+        cv_url_absolu = None
+    return render(request, 'portfolio/cv.html', {'cv': cv, 'cv_url_absolu': cv_url_absolu})
