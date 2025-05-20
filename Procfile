@@ -1,1 +1,1 @@
-web: gunicorn portfolio-fadil.wsgi
+web: gunicorn portfolio_fadil.wsgi
