@@ -1,0 +1,32 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Projets - Portfolio Fadil{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Mes Projets</h2>
+    <p>Voici quelques réalisations concrètes que j'ai menées.</p>
+</section>
+
+<section class="highlights">
+    <div class="card">
+        <i class="fas fa-solar-panel fa-2x"></i>
+        <h3>Application de dimensionnement solaire</h3>
+        <p>Une application web qui facilite le calcul des besoins en énergie solaire.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-laptop-code fa-2x"></i>
+        <h3>Site web H-Tech Corporate</h3>
+        <p>Développement complet du site vitrine de l'institut H-Tech Corporate avec Django.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-database fa-2x"></i>
+        <h3>Système de gestion de données</h3>
+        <p>Création d’un outil de collecte, d’analyse et de visualisation de données énergétiques.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-code fa-2x"></i>
+        <h3>Script Python automatisé</h3>
+        <p>Développement d’un script Python pour automatiser des calculs de puissance.</p>
+    </div>
+</section>
+{% endblock %}

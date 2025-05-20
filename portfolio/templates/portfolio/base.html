@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Portfolio Fadil{% endblock %}</title>
+   <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio de Fadil</h1>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/a-propos/">À propos</a>
+            <a href="/competences/">Compétences</a>
+            <a href="/projets/">Projets</a>
+            <a href="/services/">Services</a>
+            <a href="/contact/">Contact</a>
+            <a href="/cv/">Cv</a>
+        </nav>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>
+        <p>© 2025 Fadil. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Compétences - Portfolio Fadil{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Mes compétences</h2>
+    <p>Voici les domaines dans lesquels j’excelle :</p>
+</section>
+
+<section class="highlights">
+    <div class="card">
+        <i class="fas fa-python fa-2x"></i>
+        <h3>Python</h3>
+        <p>Programmation avancée pour des applications robustes et automatisées.</p>
+    </div>
+    <div class="card">
+        <i class="fab fa-django fa-2x"></i>
+        <h3>Django</h3>
+        <p>Développement web rapide et sécurisé avec le framework Django.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-solar-panel fa-2x"></i>
+        <h3>Énergie solaire</h3>
+        <p>Conception et dimensionnement de systèmes photovoltaïques autonomes.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-database fa-2x"></i>
+        <h3>Base de données</h3>
+        <p>Utilisation de PostgreSQL et SQLite pour stocker et gérer les données.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-server fa-2x"></i>
+        <h3>Déploiement</h3>
+        <p>Hébergement de projets sur des serveurs web comme Heroku ou Render.</p>
+    </div>
+</section>
+{% endblock %}

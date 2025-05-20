@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Contact - Portfolio Fadil{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Me Contacter</h2>
+    <p>N'hésitez pas à m'envoyer un message pour toute collaboration ou question.</p>
+</section>
+
+<section class="contact-form">
+    <form action="/contact/" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label><i class="fas fa-user"></i> Nom</label>
+            <input type="text" name="nom" placeholder="Votre nom complet" required>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" name="email" placeholder="Votre adresse email" required>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-comment-alt"></i> Message</label>
+            <textarea name="message" placeholder="Votre message ici..." rows="6" required></textarea>
+        </div>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
+    </form>
+</section>
+{% endblock %}
