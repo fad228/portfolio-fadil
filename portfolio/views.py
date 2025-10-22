@@ -15,3 +15,6 @@ def cv(request):
     else:
         cv_url_absolu = None
     return render(request, 'portfolio/cv.html', {'cv': cv, 'cv_url_absolu': cv_url_absolu})
+
+def metsw_btp(request):
+    return render(request, 'projects/metsw-btp/index.html')

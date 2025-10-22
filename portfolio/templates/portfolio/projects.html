@@ -1,7 +1,9 @@
 {% extends 'portfolio/base.html' %}
 {% block title %}Projets - Portfolio Fadil{% endblock %}
+{% load static %}
 
 {% block content %}
+
 <section class="hero">
     <h2>Mes Projets</h2>
     <p>Voici quelques réalisations concrètes que j'ai menées.</p>
@@ -17,6 +19,8 @@
         <i class="fas fa-laptop-code fa-2x"></i>
         <h3>Site web H-Tech Corporate</h3>
         <p>Développement complet du site vitrine de l'institut H-Tech Corporate avec Django.</p>
+        <button class="open-btn" onclick="window.open('https://h-tech-corporate.onrender.com', '_blank')"> Voir le site </button>
+
     </div>
     <div class="card">
         <i class="fas fa-database fa-2x"></i>
@@ -28,5 +32,77 @@
         <h3>Script Python automatisé</h3>
         <p>Développement d’un script Python pour automatiser des calculs de puissance.</p>
     </div>
+
+    <!-- Metsw BTP comme box -->
+    <div class="card">
+        <i class="fas fa-building fa-2x"></i>
+        <h3>Metsw BTP — Site de démonstration</h3>
+        <p>Site vitrine professionnel pour une entreprise de BTP, design responsive et navigation fluide.</p>
+        <button class="open-btn" onclick="openIframe()">Voir le projet</button>
+    </div>
 </section>
+
+<!-- iframe cachée par défaut -->
+<div class="iframe-container" id="project-iframe" style="display:none;">
+    <button class="close-btn" onclick="closeIframe()">Fermer</button>
+    <iframe src="{% static 'projects/metsw-btp/index.html' %}"></iframe>
+</div>
+
+<!-- Styles -->
+<style>
+    .iframe-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: rgba(0,0,0,0.9);
+    }
+
+    .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .close-btn {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 10000;
+        background: #ff4c4c;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .open-btn {
+        background: #1abc9c;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+
+</style>
+
+<!-- Script -->
+<script>
+    function openIframe() {
+        document.getElementById('project-iframe').style.display = 'block';
+    }
+
+    function closeIframe() {
+        document.getElementById('project-iframe').style.display = 'none';
+    }
+</script>
+
 {% endblock %}

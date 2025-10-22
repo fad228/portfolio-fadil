@@ -11,4 +11,6 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('contact/', views.contact, name='contact'),
     path('cv/', views.cv, name='cv'),
+    path('projets/metsw-btp/', views.metsw_btp, name='metsw_btp'),
+
 ]
