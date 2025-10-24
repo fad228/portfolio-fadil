@@ -16,3 +16,13 @@ document.addEventListener('DOMContentLoaded', function(){
   };
   onScroll(); window.addEventListener('scroll', onScroll);
 });
+
+
+const navToggle = document.createElement('button');
+navToggle.textContent = '☰';
+navToggle.classList.add('nav-toggle');
+document.querySelector('.nav-inner').prepend(navToggle);
+
+navToggle.addEventListener('click', () => {
+  document.querySelector('nav ul').classList.toggle('show');
+});
