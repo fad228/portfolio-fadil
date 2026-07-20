@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-votre-cle-secrete-ici'
 # Mode développement
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','fad228.pythonanywhere.com']
+ALLOWED_HOSTS = ['*','fadil228.pythonanywhere.com']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
